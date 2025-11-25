@@ -12,6 +12,8 @@ import Commercial from "./components/pages/explorepages/commercial";
 import Residential from "./components/pages/explorepages/residential";
 import Industrial from "./components/pages/explorepages/industrial";
 import Rawland from "./components/pages/explorepages/rawland";
+import Thirumangalam from "./components/pages/explorepages/thirumangalam";
+import PropertyCommercial from "./components/pages/explorepages/propcommercial";
 
 /* Admin components */
 import AdminNavbar from "./components/admin/adminNavbar";
@@ -55,6 +57,8 @@ const App: React.FC = () => {
         <Route path="/" element={<PublicLayout><Home /></PublicLayout>} />
         <Route path="/explore" element={<PublicLayout><Explore /></PublicLayout>} />
         <Route path="/explore/commercial" element={<PublicLayout><Commercial /></PublicLayout>} />
+        <Route path="/explore/thirumangalam" element={<PublicLayout><Thirumangalam /></PublicLayout>} />
+        <Route path="/explore/propcommercial" element={<PublicLayout><PropertyCommercial /></PublicLayout>} />
         <Route path="/explore/residential" element={<PublicLayout><Residential /></PublicLayout>} />
         <Route path="/explore/industrial" element={<PublicLayout><Industrial /></PublicLayout>} />
         <Route path="/explore/rawland" element={<PublicLayout><Rawland /></PublicLayout>} />

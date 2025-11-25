@@ -129,7 +129,7 @@ const Industrial: React.FC = () => {
               <h3 className="mt-3 text-lg font-semibold text-white">{item.title}</h3>
               <p className="text-emerald-200 text-sm">{item.subtitle}</p>
 
-              <Link to={`/explore/${i}`}>
+              <Link to={`/explore/industrial`}>
                 <button className="mt-3 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm rounded-lg">
                   View Details
                 </button>

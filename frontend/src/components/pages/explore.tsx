@@ -1,11 +1,8 @@
 // src/components/pages/explore.tsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+ 
 
-/**
- * Hero image (uploaded during this session)
- * Local path: /mnt/data/7d754114-2d9a-4310-841a-1a1e7fc7d8ce.png
- */
 const HERO = "/Thirumangalam.webp";
 
 const properties = [
@@ -139,11 +136,19 @@ const Explore: React.FC = () => {
               <h3 className="mt-3 text-lg font-semibold text-white">{item.title}</h3>
               <p className="text-emerald-200 text-sm">{item.subtitle}</p>
 
-              <Link to={`/explore/${i}`}>
-                <button className="mt-3 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm rounded-lg">
-                  View Details
-                </button>
-              </Link>
+              {item.title === "Thirumangalam" ? (
+                <Link to="/explore/thirumangalam">
+                  <button className="mt-3 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm rounded-lg">
+                    View Details
+                  </button>
+                </Link>
+              ) : (
+                <Link to={`/explore/${i}`}>
+                  <button className="mt-3 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white text-sm rounded-lg">
+                    View Details
+                  </button>
+                </Link>
+              )}
             </div>
           ))}
         </div>
