@@ -20,10 +20,10 @@ const Dashboard: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <main className="max-w-6xl mx-auto px-6 py-10">
+      <main className="max-w-6xl mx-auto px-6 py-0">
         {/* Page title */}
         <div className="mb-8">
-          <h1 className="text-3xl font-extrabold text-slate-800">Admin Dashboard</h1>
+          <h1 className="text-3xl font-bold text-slate-800">Admin Dashboard</h1>
         </div>
 
         {/* KPI row */}

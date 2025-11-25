@@ -60,10 +60,10 @@ const ManageUsers: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-slate-50">
-      <div className="max-w-6xl mx-auto px-6 py-10">
+      <div className="max-w-6xl mx-auto px-6 py-0">
         {/* Title */}
         <div className="mb-6">
-          <h1 className="text-3xl font-extrabold text-slate-800">Manage Users</h1>
+          <h1 className="text-3xl font-bold text-slate-800">Manage Users</h1>
         </div>
 
         {/* Search pill */}

@@ -21,6 +21,8 @@ import ManageLands from "./components/pages/admin/lands";
 import ManageUsers from "./components/pages/admin/users";  
 import UsersDetails from "./components/pages/admin/userdetails";
 import NewLand from "./components/pages/admin/addland";
+import EditLand from "./components/pages/admin/editland";
+import Enquiries from "./components/pages/admin/enquiries";
 
 /* PUBLIC LAYOUT */
 const PublicLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -66,6 +68,8 @@ const App: React.FC = () => {
         <Route path="/admin/lands" element={<AdminLayout><ManageLands /></AdminLayout>} />
         <Route path="/admin/users/userdetails" element={<AdminLayout><UsersDetails /></AdminLayout>} />
         <Route path="/admin/lands/addland" element={<AdminLayout><NewLand /></AdminLayout>} />
+        <Route path="/admin/lands/editland" element={<AdminLayout><EditLand /></AdminLayout>} />
+        <Route path="/admin/enquiries" element={<AdminLayout><Enquiries /></AdminLayout>} />
 
 
       </Routes>
