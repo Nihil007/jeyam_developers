@@ -120,7 +120,7 @@ const Dashboard: React.FC = () => {
         <section className="mb-16">
           <h3 className="text-lg font-semibold text-slate-800 mb-4">Quick Actions Panel</h3>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/admin" className="inline-block bg-emerald-400 hover:bg-emerald-500 text-white px-4 py-2 rounded-full shadow">
+            <Link to="/admin/lands/addland" className="inline-block bg-emerald-400 hover:bg-emerald-500 text-white px-4 py-2 rounded-full shadow">
               Add New Land
             </Link>
             <Link to="/admin" className="inline-block bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full">
