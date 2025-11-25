@@ -6,52 +6,43 @@ import { Link } from "react-router-dom";
  * Hero image (uploaded during this session)
  * Local path: /mnt/data/7d754114-2d9a-4310-841a-1a1e7fc7d8ce.png
  */
-const HERO = "/Thirumangalam.webp";
+const HERO = "/residential/residential.webp";
 
 const properties = [
   {
-    title: "Thirumangalam",
+    title: "Madurai - Anna Nagar",
     subtitle: "Valley View, CA · 10 acres",
-    image: "/Thirumangalam.webp",
+    image: "/residential/madurai.webp",
   },
   {
-    title: "Coastal Ridge Retreat",
+    title: "Coimbatore ",
     subtitle: "Coastal Ridge, CA · 5 acres",
-    image: "/Ridge_retreat.webp",
+    image: "/residential/coimbatore.webp",
   },
   {
-    title: "Mountain View Sanctuary",
+    title: "Chennai - Velachery",
     subtitle: "Mountain View · 20 acres",
-    image: "/Mountain_view.webp",
+    image: "/residential/chennai.webp",
   },
   {
-    title: "Desert Bloom Oasis",
+    title: "Trichy - Thillai Nagar",
     subtitle: "Desert Bloom, AZ · 15 acres",
-    image: "/Desert_Bloom.webp",
+    image: "/residential/trichy.webp",
   },
   {
-    title: "Forest Haven Reserve",
+    title: "Salem - Fairlands",
     subtitle: "Forest Haven, OR · 25 acres",
-    image: "/Forest_Haven.webp",
+    image: "/residential/salem.webp",
   },
   {
-    title: "Lakeside Tranquility",
+    title: "Tirunelveli - Junction",
     subtitle: "Lakeside, WA · 8 acres",
-    image: "/Lakeside_Tranquility.webp",
-  },
-  {
-    title: "Urban Green Space",
-    subtitle: "Urban Green, NY · 2 acres",
-    image: "/Urban_Green.webp",
-  },
-  {
-    title: "Rural Charm Estate",
-    subtitle: "Rural Charm, TX · 30 acres",
-    image: "/Rural_Charm.webp",
+    image: "/residential/tirunelveli.webp",
   },
 ];
 
-const Explore: React.FC = () => {
+
+const Residential: React.FC = () => {
   const [search, setSearch] = useState("");
 
   const clearSearch = () => setSearch("");
@@ -67,7 +58,7 @@ const Explore: React.FC = () => {
             style={{ backgroundImage: `url('${HERO}')` }}
           >
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-lg ">
-              Explore Verified Lands
+              Residential
             </h1>
           </div>
 
@@ -124,7 +115,7 @@ const Explore: React.FC = () => {
 
       {/* PROPERTIES SECTION */}
       <div className="max-w-7xl mx-auto px-6 mt-16 pb-16">
-        <h2 className="text-center text-3xl font-bold text-white mb-8">Featured Properties</h2>
+        <h2 className="text-center text-3xl font-bold text-white mb-8">Avaliable Residential Lands</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-8">
           {properties.map((item, i) => (
@@ -152,4 +143,4 @@ const Explore: React.FC = () => {
   );
 };
 
-export default Explore;
+export default Residential;

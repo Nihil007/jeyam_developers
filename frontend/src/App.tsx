@@ -5,6 +5,10 @@ import Footer from "./components/footer";
 import Home from "./components/pages/home";
 import Contact from "./components/pages/contact";
 import Explore from "./components/pages/explore";
+import Commercial from "./components/pages/explorepages/commercial";
+import Residential from "./components/pages/explorepages/residential";
+import Industrial from "./components/pages/explorepages/industrial";
+import Rawland from "./components/pages/explorepages/rawland";
 
 /* Simple placeholder pages — replace with full implementations */
 // const Explore: React.FC = () => (
@@ -35,6 +39,10 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/explore" element={<Explore />} />
+            <Route path="/explore/commercial" element={<Commercial />} />
+            <Route path="/explore/residential" element={<Residential />} />
+            <Route path="/explore/industrial" element={<Industrial />} />
+            <Route path="/explore/rawland" element={<Rawland />} />
             <Route path="/post" element={<PostMyLand />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
