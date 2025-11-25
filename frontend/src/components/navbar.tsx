@@ -5,7 +5,6 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const NavBar: React.FC = () => {
   const location = useLocation();
   const isExplore = location.pathname.startsWith("/explore");
-  const [open, setOpen] = useState(false); // mobile dropdown toggle
 
   const [scrolled, setScrolled] = useState(false);
 
