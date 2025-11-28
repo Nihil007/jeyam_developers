@@ -4,16 +4,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 /* Public components */
 import NavBar from "./components/navbarandfooter/user/navbar";
 import Footer from "./components/navbarandfooter/user/footer";
-import Home from "./components/pages/home";
-import Contact from "./components/pages/contact";
-import PostMyLand from "./components/pages/post";
-import Explore from "./components/pages/explore";
-import Commercial from "./components/pages/explorepages/commercial";
-import Residential from "./components/pages/explorepages/residential";
-import Industrial from "./components/pages/explorepages/industrial";
-import Rawland from "./components/pages/explorepages/rawland";
-import Thirumangalam from "./components/pages/explorepages/thirumangalam";
-import PropertyCommercial from "./components/pages/explorepages/propcommercial";
+import Home from "./components/pages/user/home";
+import Contact from "./components/pages/user/contact";
+import PostMyLand from "./components/pages/user/post";
+import Explore from "./components/pages/user/explore";
+import Commercial from "./components/pages/user/explorepages/commercial";
+import Residential from "./components/pages/user/explorepages/residential";
+import Industrial from "./components/pages/user/explorepages/industrial";
+import Rawland from "./components/pages/user/explorepages/rawland";
+import Thirumangalam from "./components/pages/user/explorepages/thirumangalam";
+import PropertyCommercial from "./components/pages/user/explorepages/propcommercial";
 
 /* Admin components */
 import AdminNavbar from "./components/navbarandfooter/admin/adminNavbar";
