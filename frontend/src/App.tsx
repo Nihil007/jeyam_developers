@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 /* Public components */
-import NavBar from "./components/navbar";
-import Footer from "./components/footer";
+import NavBar from "./components/navbarandfooter/user/navbar";
+import Footer from "./components/navbarandfooter/user/footer";
 import Home from "./components/pages/home";
 import Contact from "./components/pages/contact";
 import PostMyLand from "./components/pages/post";
@@ -16,8 +16,8 @@ import Thirumangalam from "./components/pages/explorepages/thirumangalam";
 import PropertyCommercial from "./components/pages/explorepages/propcommercial";
 
 /* Admin components */
-import AdminNavbar from "./components/admin/adminNavbar";
-import AdminFooter from "./components/admin/adminFooter";
+import AdminNavbar from "./components/navbarandfooter/admin/adminNavbar";
+import AdminFooter from "./components/navbarandfooter/admin/adminFooter";
 import AdminDashboard from "./components/pages/admin/dashboard";  
 import ManageLands from "./components/pages/admin/lands";  
 import ManageUsers from "./components/pages/admin/users";  
