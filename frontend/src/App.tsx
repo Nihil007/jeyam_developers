@@ -14,6 +14,8 @@ import Industrial from "./components/pages/user/explorepages/industrial";
 import Rawland from "./components/pages/user/explorepages/rawland";
 import Thirumangalam from "./components/pages/user/explorepages/thirumangalam";
 import PropertyCommercial from "./components/pages/user/explorepages/propcommercial";
+import LoginPage from "./components/pages/login";
+import SignupPage from "./components/pages/signup";
 
 /* Admin components */
 import AdminNavbar from "./components/navbarandfooter/admin/adminNavbar";
@@ -64,6 +66,8 @@ const App: React.FC = () => {
         <Route path="/explore/rawland" element={<PublicLayout><Rawland /></PublicLayout>} />
         <Route path="/post" element={<PublicLayout><PostMyLand /></PublicLayout>} />
         <Route path="/contact" element={<PublicLayout><Contact /></PublicLayout>} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
 
         {/* ---------- ADMIN ROUTES ---------- */}
         <Route path="/admin" element={<AdminLayout><AdminDashboard /></AdminLayout>} />
