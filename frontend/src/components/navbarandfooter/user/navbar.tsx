@@ -128,13 +128,13 @@ const NavBar: React.FC = () => {
               <div className="absolute right-0 mt-3 w-40 backdrop-blur-xl rounded-lg shadow-xl py-2 z-50">
                 <Link
                   to="/login"
-                  className="block px-4 py-2 text-white-800 hover:bg-gray-100"
+                  className="block px-4 py-2 text-white-800 hover:bg-white/10"
                 >
                   Login
                 </Link>
                 <Link
                   to="/signup"
-                  className="block px-4 py-2 text-white-800 hover:bg-gray-100"
+                  className="block px-4 py-2 text-white-800 hover:bg-white/10"
                 >
                   Register
                 </Link>

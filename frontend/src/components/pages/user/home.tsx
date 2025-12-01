@@ -90,10 +90,13 @@ const Home: React.FC = () => {
             <input
             aria-label="search"
             placeholder="Search by Location or Plot ID"
-            className="rounded-l-full px-4 py-3 w-3/5 max-w-md outline-none bg-white/20 text-white placeholder-white/70 backdrop-blur-sm"
+            className="rounded-full px-4 py-3 w-3/5 max-w-md outline-none bg-white/20 text-white placeholder-white/70 backdrop-blur-sm"
             />
-            <Link to="/explore">
-            <button className="rounded-r-full px-6 py-3 bg-emerald-400 text-white font-semibold">
+            
+        </div>
+        <div className="mt-5 flex justify-center">
+        <Link to="/explore">
+            <button className="rounded-full px-6 py-3 bg-emerald-400 text-white font-semibold">
             Explore Lands
             </button>
             </Link>
