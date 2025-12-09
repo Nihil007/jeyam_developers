@@ -56,7 +56,7 @@ const Explore: React.FC = () => {
   return (
     <div className="min-h-screen">
       {/* HERO – centered card with side gaps */}
-      <div className="w-full flex justify-center mt-16 px-4">
+      <div className="w-full flex justify-center mt-20 px-4">
         <div className="relative w-full max-w-6xl">
           {/* Hero image card */}
           <div

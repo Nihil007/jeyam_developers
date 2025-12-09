@@ -66,7 +66,7 @@ const Home: React.FC = () => {
     <div className="min-h-screen">
 
     {/* HERO */}
-    <section className="pt-28" aria-label="hero">
+    <section className="pt-20" aria-label="hero">
     <div
         className="max-w-7xl mx-auto rounded-lg overflow-hidden shadow-lg transition-all duration-700 relative"
         style={{
@@ -95,11 +95,9 @@ const Home: React.FC = () => {
             
         </div>
         <div className="mt-5 flex justify-center">
-        <Link to="/explore">
-            <button className="rounded-full px-6 py-3 bg-emerald-400 text-white font-semibold">
-            Explore Lands
-            </button>
-            </Link>
+          <Link to="/explore" className="rounded-full px-6 py-3 bg-emerald-400 text-white font-semibold">
+              Explore Lands
+          </Link>
         </div>
         </div>
 

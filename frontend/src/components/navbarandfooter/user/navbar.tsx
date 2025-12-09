@@ -7,7 +7,8 @@ const NavBar: React.FC = () => {
   const isExplore = location.pathname.startsWith("/explore");
 
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // avatar dropdown
+  const [mobileOpen, setMobileOpen] = useState(false); // mobile nav
 
   const avatarRef = useRef<HTMLDivElement | null>(null);
 
@@ -29,6 +30,11 @@ const NavBar: React.FC = () => {
     return () => document.removeEventListener("click", handler);
   }, []);
 
+  // Close mobile menu on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
+
   return (
     <header
       className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 
@@ -46,6 +52,45 @@ const NavBar: React.FC = () => {
             />
           </div>
         </Link>
+
+        {/* Mobile hamburger */}
+        <button
+          type="button"
+          className="md:hidden inline-flex items-center justify-center p-2 rounded-md bg-white/10 hover:bg-white/20 transition"
+          onClick={() => setMobileOpen((prev) => !prev)}
+        >
+          {mobileOpen ? (
+            // X icon
+            <svg
+              className="h-6 w-6 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={1.8}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            // Hamburger icon
+            <svg
+              className="h-6 w-6 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={1.8}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          )}
+        </button>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6 text-white relative">
@@ -65,22 +110,34 @@ const NavBar: React.FC = () => {
               <div className="absolute left-0 mt-3 w-48 bg-[#06200c]/40 backdrop-blur-md rounded-lg border border-white/10 shadow-xl opacity-0 group-hover:opacity-100 transition-all duration-300">
                 <ul className="py-2">
                   <li>
-                    <Link to="/explore/residential" className="block px-4 py-2 text-sm text-white hover:bg-white/10">
+                    <Link
+                      to="/explore/residential"
+                      className="block px-4 py-2 text-sm text-white hover:bg-white/10"
+                    >
                       Residential
                     </Link>
                   </li>
                   <li>
-                    <Link to="/explore/commercial" className="block px-4 py-2 text-sm text-white hover:bg-white/10">
+                    <Link
+                      to="/explore/commercial"
+                      className="block px-4 py-2 text-sm text-white hover:bg-white/10"
+                    >
                       Commercial
                     </Link>
                   </li>
                   <li>
-                    <Link to="/explore/industrial" className="block px-4 py-2 text-sm text-white hover:bg-white/10">
+                    <Link
+                      to="/explore/industrial"
+                      className="block px-4 py-2 text-sm text-white hover:bg-white/10"
+                    >
                       Industrial
                     </Link>
                   </li>
                   <li>
-                    <Link to="/explore/rawland" className="block px-4 py-2 text-sm text-white hover:bg-white/10">
+                    <Link
+                      to="/explore/rawland"
+                      className="block px-4 py-2 text-sm text-white hover:bg-white/10"
+                    >
                       Raw Land
                     </Link>
                   </li>
@@ -93,7 +150,10 @@ const NavBar: React.FC = () => {
             Post My Land
           </NavLink>
 
-          <NavLink to="/contact" className={({ isActive }) => (isActive ? "underline" : "")}>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "underline" : "")}
+          >
             Contact
           </NavLink>
 
@@ -128,22 +188,103 @@ const NavBar: React.FC = () => {
               <div className="absolute right-0 mt-3 w-40 backdrop-blur-xl rounded-lg shadow-xl py-2 z-50">
                 <Link
                   to="/login"
-                  className="block px-4 py-2 text-white-800 hover:bg-white/10"
+                  className="block px-4 py-2 text-white hover:bg-white/10"
                 >
                   Login
                 </Link>
                 <Link
                   to="/signup"
-                  className="block px-4 py-2 text-white-800 hover:bg-white/10"
+                  className="block px-4 py-2 text-white hover:bg-white/10"
                 >
                   Register
                 </Link>
               </div>
             )}
           </div>
-          {/* END ADDED */}
         </nav>
       </div>
+
+      {/* Mobile nav panel */}
+      {mobileOpen && (
+        <nav className="md:hidden px-6 pb-4 bg-[#06200c]/90 backdrop-blur-md border-t border-white/10">
+          <ul className="flex flex-col gap-2 text-white">
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `block py-2 ${isActive ? "underline" : ""}`
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="/explore"
+                className={({ isActive }) =>
+                  `block py-2 ${isActive ? "underline" : ""}`
+                }
+              >
+                Explore
+              </NavLink>
+            </li>
+
+            {/* Optional: direct sub-links for explore */}
+            <li className="pl-4 text-sm space-y-1">
+              <Link to="/explore/residential" className="block py-1">
+                Residential
+              </Link>
+              <Link to="/explore/commercial" className="block py-1">
+                Commercial
+              </Link>
+              <Link to="/explore/industrial" className="block py-1">
+                Industrial
+              </Link>
+              <Link to="/explore/rawland" className="block py-1">
+                Raw Land
+              </Link>
+            </li>
+
+            <li>
+              <NavLink
+                to="/post"
+                className={({ isActive }) =>
+                  `block py-2 ${isActive ? "underline" : ""}`
+                }
+              >
+                Post My Land
+              </NavLink>
+            </li>
+
+            <li>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `block py-2 ${isActive ? "underline" : ""}`
+                }
+              >
+                Contact
+              </NavLink>
+            </li>
+
+            <li className="pt-2 flex gap-3">
+              <Link
+                to="/login"
+                className="flex-1 text-center py-2 rounded-md border border-white/40"
+              >
+                Login
+              </Link>
+              <Link
+                to="/signup"
+                className="flex-1 text-center py-2 rounded-md bg-white text-[#06200c] font-medium"
+              >
+                Register
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      )}
     </header>
   );
 };

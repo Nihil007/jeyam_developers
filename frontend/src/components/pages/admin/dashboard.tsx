@@ -126,7 +126,7 @@ const Dashboard: React.FC = () => {
             <Link to="/admin" className="inline-block bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full">
               Add New User
             </Link>
-            <Link to="/admin" className="inline-block bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full">
+            <Link to="/admin/enquiries" className="inline-block bg-white border border-slate-200 text-slate-700 px-4 py-2 rounded-full">
               View Inquiries
             </Link>
           </div>
